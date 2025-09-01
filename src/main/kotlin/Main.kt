@@ -31,13 +31,13 @@ fun main() = runBlocking {
 }
 
 interface ApiService {
-    @GET("/api/posts")
+    @GET("api/posts")
     suspend fun getPosts(): List<Post>
 
-    @GET("/api/posts/{id}/comments")
+    @GET("api/posts/{id}/comments")
     suspend fun getComments(@Path("id") postId: Long): List<Comment>
 
-    @GET("/api/authors/{id}")
+    @GET("api/authors/{id}")
     suspend fun getAuthor(@Path("id") authorId: Long): Author
 }
 
