@@ -42,7 +42,7 @@ interface ApiService {
 }
 
 val retrofit = Retrofit.Builder()
-    .baseUrl("http://10.0.2.2:9999/api/slow/")
+    .baseUrl("http://localhost:9999/")
     .addConverterFactory(GsonConverterFactory.create())
     .build()
 
